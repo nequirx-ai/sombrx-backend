@@ -1,0 +1,22 @@
+# SOMBRX SYSTEM 2.0 fly.io config
+# Renombra el campo `app` si ya existe el nombre.
+
+app = "sombrx-backend"
+primary_region = "iad"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8001"
+
+[http_service]
+  internal_port = 8001
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory_mb = 256
