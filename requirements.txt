@@ -2,6 +2,7 @@ fastapi
 uvicorn
 starlette
 
+motor
 pymongo
 dnspython
 
